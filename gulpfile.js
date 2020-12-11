@@ -4,7 +4,9 @@ const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 
-const dist = "./dist/";
+// const dist = "./dist/";
+const dist = "C:/Users/user/Downloads/OpenServer/domains/sourse2";   //Переписали путь дисста (shift и прв.кнопка мыши (путь));
+
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/index.html")
