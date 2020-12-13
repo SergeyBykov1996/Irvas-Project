@@ -1,6 +1,8 @@
 
+import { nodeName } from 'jquery';
 import checkNumInputs from './checkNumInputs';
 
+ 
 const changeModalState = (state) => {
     const windowForm = document.querySelectorAll('.balcon_icons_img'),
           windowWidth = document.querySelectorAll('#width'),
@@ -8,13 +10,14 @@ const changeModalState = (state) => {
           windowType = document.querySelectorAll('#view_type'),
           windowProfile = document.querySelectorAll('.checkbox');
 
-    checkNumInputs('#width');    // Функия ввод цифр
+    checkNumInputs('#width');    // Функия ввод цифр 
     checkNumInputs('#height');
 
     function bindActionToElems(even, elem, prop) {
         elem.forEach((item, i ) => {
             item.addEventListener(even, () => {
-                switch(item, nod) {
+               
+                switch(item, nodeName) {
                     case 'SPAN' :
                         state[prop] = i;
                         break;
